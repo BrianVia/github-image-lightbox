@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Image Lightbox",
+  "version": "1.0.0",
+  "description": "Open images in GitHub issues, pull requests, READMEs, and discussions in a lightbox instead of a new tab.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*",
+        "https://gist.github.com/*"
+      ],
+      "js": ["detect.js", "geom.js", "styles.js", "content.js"],
+      "css": ["cursor.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

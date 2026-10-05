@@ -1,0 +1,5 @@
+/* Cursor for links the content script will open in the lightbox. */
+a.ghlb-zoom,
+a.ghlb-zoom img {
+  cursor: zoom-in !important;
+}
